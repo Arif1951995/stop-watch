@@ -1,0 +1,30 @@
+div#time {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    /* width: 100%; */
+
+}
+
+div#time  span {
+    margin: 0 10px;
+    font-size: 3.5em;
+
+}
+#btns {
+    display: flex;
+    justify-content: space-around;
+    
+}
+#btns button {
+    padding: 5% 7%;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #ccc;
+
+}
+body > div {
+    margin: 10% 0;
+    padding: 20px;
+}
