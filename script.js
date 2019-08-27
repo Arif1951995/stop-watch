@@ -13,12 +13,14 @@ let hours = 0;
 let mins = 0;
 let seconds = 0;
 let mSeconds = 0;
+let updateTime;
 
 startBtn.addEventListener('click', () => {
-    watchRunning = true;
-  
-        setInterval(() => {
-            if(watchRunning) {
+    // watchRunning = true;
+    
+    if(!watchRunning) {
+  updateTime =  setInterval(() => {
+            
                 
                 if(mSeconds >= 1000) {
                     seconds++;
@@ -39,19 +41,24 @@ startBtn.addEventListener('click', () => {
                 }
 
 
-            mSeconds += 2;
+            mSeconds += 4;
             mSecondsOutput.textContent = mSeconds;
-        }
 
         },0)
+        watchRunning= true;
+
+    }
+
 
 })
 stopBtn.addEventListener('click', () => {
     watchRunning = false;
+    clearInterval(updateTime);
 })
 
 resetBtn.addEventListener('click', () => {
     watchRunning = false;
+        clearInterval(updateTime);
  hours = 0;
  mins = 0;
  seconds = 0;
